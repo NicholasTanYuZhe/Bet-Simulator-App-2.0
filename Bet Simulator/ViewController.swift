@@ -16,8 +16,11 @@ class ViewController: UIViewController {
         (numberDisplay.text!, isTypingNumber) = Controller().getNumber(number: (sender.currentTitle)!!, isTypingNumber: isTypingNumber, numberDisplay: numberDisplay.text!)
     }
     @IBAction func numberClear(_ sender: AnyObject) {
+        isTypingNumber = false
+        numberDisplay.text = "0"
     }
     @IBAction func numberEntered(_ sender: AnyObject) {
+        
     }
     @IBOutlet weak var numberDisplay: UILabel!
     @IBOutlet weak var prevNumberDisplay: UILabel!
