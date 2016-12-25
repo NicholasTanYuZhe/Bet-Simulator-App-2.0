@@ -10,7 +10,10 @@ import UIKit
 import AudioToolbox
 
 class ViewController: UIViewController {
+    var isTypingNumber = false
+    
     @IBAction func numberTapped(_ sender: AnyObject) {
+        (numberDisplay.text!, isTypingNumber) = Controller().getNumber(number: (sender.currentTitle)!!, isTypingNumber: isTypingNumber, numberDisplay: numberDisplay.text!)
     }
     @IBAction func numberClear(_ sender: AnyObject) {
     }

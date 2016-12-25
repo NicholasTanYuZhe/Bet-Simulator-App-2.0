@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+class Controller {
+    func getNumber(number : String, isTypingNumber : Bool, numberDisplay : String) -> (String, Bool) {
+        var numberDisplay = numberDisplay
+        var isTypingNumber = isTypingNumber
+        if isTypingNumber
+        {
+            numberDisplay = numberDisplay + number
+        }
+        else
+        {
+            numberDisplay = number
+            isTypingNumber = true
+        }
+        return (numberDisplay, isTypingNumber)
+    }
+}
