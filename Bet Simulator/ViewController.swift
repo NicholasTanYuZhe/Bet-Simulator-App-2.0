@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     var queue = [Int] ()
     var money = 0
     var winningMoney = 0
+    var numberEnter = 0
 
     
     @IBAction func numberTapped(_ sender: AnyObject) {
@@ -220,86 +221,111 @@ class ViewController: UIViewController {
                     }
                 }
             }
-//        else if start == 1
-//        {
-//            prevNumberDisplay.text = String(numberEntered)
-//            
-//            numberEntered = Int(numberDisplay.text!)!
-//            randomSmall.append(numberEntered)
-//            randomBig.append(numberEntered)
-//            randomRed.append(numberEntered)
-//            randomBlack.append(numberEntered)
-//            randomEven.append(numberEntered)
-//            randomOdd.append(numberEntered)
-//            
-//            (randomSmall, queueSmall, moneySmall, winningMoneySmall) = check(randomC: randomSmall, queueC: queueSmall, sideC: 0, moneyC: moneySmall, winMoneyC: winningMoneySmall, startValueNumberC: startValueNumber, indicatorC: 1)
-//            lowestMoneySmall = minCapital(lowestMoney: lowestMoneySmall, winMoney: winningMoneySmall)
-//            
-//            (randomBig, queueBig, moneyBig, winningMoneyBig) = check(randomC: randomBig, queueC: queueBig, sideC: 1, moneyC: moneyBig, winMoneyC: winningMoneyBig, startValueNumberC: startValueNumber, indicatorC: 1)
-//            lowestMoneyBig = minCapital(lowestMoney: lowestMoneyBig, winMoney: winningMoneyBig)
-//            
-//            (randomRed, queueRed, moneyRed, winningMoneyRed) = check(randomC: randomRed, queueC: queueRed, sideC: 0, moneyC: moneyRed, winMoneyC: winningMoneyRed, startValueNumberC: startValueNumber, indicatorC: 2)
-//            lowestMoneyRed = minCapital(lowestMoney: lowestMoneyRed, winMoney: winningMoneyRed)
-//            
-//            (randomBlack, queueBlack, moneyBlack, winningMoneyBlack) = check(randomC: randomBlack, queueC: queueBlack, sideC: 1, moneyC: moneyBlack, winMoneyC: winningMoneyBlack, startValueNumberC: startValueNumber, indicatorC: 2)
-//            lowestMoneyBlack = minCapital(lowestMoney: lowestMoneyBlack, winMoney: winningMoneyBlack)
-//            
-//            (randomEven, queueEven, moneyEven, winningMoneyEven) = check(randomC: randomEven, queueC: queueEven, sideC: 0, moneyC: moneyEven, winMoneyC: winningMoneyEven, startValueNumberC: startValueNumber, indicatorC: 3)
-//            lowestMoneyEven = minCapital(lowestMoney: lowestMoneyEven, winMoney: winningMoneyEven)
-//            
-//            (randomOdd, queueOdd, moneyOdd, winningMoneyOdd) = check(randomC: randomOdd, queueC: queueOdd, sideC: 1, moneyC: moneyOdd, winMoneyC: winningMoneyOdd, startValueNumberC: startValueNumber, indicatorC: 3)
-//            lowestMoneyOdd = minCapital(lowestMoney: lowestMoneyOdd, winMoney: winningMoneyOdd)
-//            
-//            if moneySmall == moneyBig
-//            {
-//                defaultCurrentSmallBigText.text = "Draw           Bet: "
-//                nextSmallBigBet.text = "0"
-//            }
-//            else if moneySmall < moneyBig
-//            {
-//                defaultCurrentSmallBigText.text = "Big            Bet: "
-//                nextSmallBigBet.text = String(moneyBig - moneySmall)
-//            }
-//            else
-//            {
-//                defaultCurrentSmallBigText.text = "Small          Bet: "
-//                nextSmallBigBet.text = String(moneySmall - moneyBig)
-//            }
-//            currentSmallBigWin.text = String(winningMoneyBig+winningMoneySmall)
-//            
-//            if moneyRed == moneyBlack
-//            {
-//                defaultCurrentRedBlackText.text = "Draw           Bet: "
-//                nextRedBlackBet.text = "0"
-//            }
-//            else if moneyRed < moneyBlack
-//            {
-//                defaultCurrentRedBlackText.text = "Black          Bet: "
-//                nextRedBlackBet.text = String(moneyBlack - moneyRed)
-//            }
-//            else
-//            {
-//                defaultCurrentRedBlackText.text = "Red            Bet: "
-//                nextRedBlackBet.text = String(moneyRed - moneyBlack)
-//            }
-//            currentRedBlackWin.text = String(winningMoneyBlack+winningMoneyRed)
-//            
-//            if moneyEven == moneyOdd
-//            {
-//                defaultCurrentEvenOddText.text = "Draw           Bet: "
-//                nextEvenOddBet.text = "0"
-//            }
-//            else if moneyEven < moneyOdd
-//            {
-//                defaultCurrentEvenOddText.text = "Odd            Bet: "
-//                nextEvenOddBet.text = String(moneyOdd - moneyEven)
-//            }
-//            else
-//            {
-//                defaultCurrentEvenOddText.text = "Even           Bet: "
-//                nextEvenOddBet.text = String(moneyEven - moneyOdd)
-//            }
-//            currentEvenOddWin.text = String(winningMoneyOdd+winningMoneyEven)
+        }
+        else if start == 1
+        {
+            prevNumberDisplay.text = String(numberEnter)
+            
+            numberEnter = Int(numberDisplay.text!)!
+            small.addRandom(newElement: numberEnter)
+            big.addRandom(newElement: numberEnter)
+            red.addRandom(newElement: numberEnter)
+            black.addRandom(newElement: numberEnter)
+            even.addRandom(newElement: numberEnter)
+            odd.addRandom(newElement: numberEnter)
+            
+            (random, queue, money, winningMoney) = Logic().check(random: small.getRandom(), queue: small.getQueue(), side: 0, money: small.getMoney(), winMoney: small.getWinningMoney(), startValueNumber: startValueNumber, indicator: 1)
+            small.setRandom(random: random)
+            small.setQueue(queue: queue)
+            small.setMoney(money: money)
+            small.setWinningMoney(winningMoney: winningMoney)
+            small.setLowestMoney(lowestMoney: Logic().minCapital(lowestMoney: small.getLowestMoney(), winMoney: small.getWinningMoney()))
+            
+            (random, queue, money, winningMoney) = Logic().check(random: big.getRandom(), queue: big.getQueue(), side: 1, money: big.getMoney(), winMoney: big.getWinningMoney(), startValueNumber: startValueNumber, indicator: 1)
+            big.setRandom(random: random)
+            big.setQueue(queue: queue)
+            big.setMoney(money: money)
+            big.setWinningMoney(winningMoney: winningMoney)
+            big.setLowestMoney(lowestMoney: Logic().minCapital(lowestMoney: big.getLowestMoney(), winMoney: big.getWinningMoney()))
+            
+            (random, queue, money, winningMoney) = Logic().check(random: red.getRandom(), queue: red.getQueue(), side: 0, money: red.getMoney(), winMoney: red.getWinningMoney(), startValueNumber: startValueNumber, indicator: 2)
+            red.setRandom(random: random)
+            red.setQueue(queue: queue)
+            red.setMoney(money: money)
+            red.setWinningMoney(winningMoney: winningMoney)
+            red.setLowestMoney(lowestMoney: Logic().minCapital(lowestMoney: red.getLowestMoney(), winMoney: red.getWinningMoney()))
+            
+            (random, queue, money, winningMoney) = Logic().check(random: black.getRandom(), queue: black.getQueue(), side: 1, money: black.getMoney(), winMoney: black.getWinningMoney(), startValueNumber: startValueNumber, indicator: 2)
+            black.setRandom(random: random)
+            black.setQueue(queue: queue)
+            black.setMoney(money: money)
+            black.setWinningMoney(winningMoney: winningMoney)
+            black.setLowestMoney(lowestMoney: Logic().minCapital(lowestMoney: black.getLowestMoney(), winMoney: black.getWinningMoney()))
+            
+            (random, queue, money, winningMoney) = Logic().check(random: even.getRandom(), queue: even.getQueue(), side: 0, money: even.getMoney(), winMoney: even.getWinningMoney(), startValueNumber: startValueNumber, indicator: 3)
+            even.setRandom(random: random)
+            even.setQueue(queue: queue)
+            even.setMoney(money: money)
+            even.setWinningMoney(winningMoney: winningMoney)
+            even.setLowestMoney(lowestMoney: Logic().minCapital(lowestMoney: even.getLowestMoney(), winMoney: even.getWinningMoney()))
+            
+            (random, queue, money, winningMoney) = Logic().check(random: odd.getRandom(), queue: odd.getQueue(), side: 1, money: odd.getMoney(), winMoney: odd.getWinningMoney(), startValueNumber: startValueNumber, indicator: 3)
+            odd.setRandom(random: random)
+            odd.setQueue(queue: queue)
+            odd.setMoney(money: money)
+            odd.setWinningMoney(winningMoney: winningMoney)
+            odd.setLowestMoney(lowestMoney: Logic().minCapital(lowestMoney: odd.getLowestMoney(), winMoney: odd.getWinningMoney()))
+            
+            if small.getMoney() == big.getMoney()
+            {
+                defaultCurrentSmallBigText.text = "Draw           Bet: "
+                nextSmallBigBet.text = "0"
+            }
+            else if small.getMoney() < big.getMoney()
+            {
+                defaultCurrentSmallBigText.text = "Big            Bet: "
+                nextSmallBigBet.text = String(big.getMoney() - small.getMoney())
+            }
+            else
+            {
+                defaultCurrentSmallBigText.text = "Small          Bet: "
+                nextSmallBigBet.text = String(small.getMoney() - big.getMoney())
+            }
+            currentSmallBigWin.text = String(big.getWinningMoney()+small.getWinningMoney())
+            
+            if red.getMoney() == black.getMoney()
+            {
+                defaultCurrentRedBlackText.text = "Draw           Bet: "
+                nextRedBlackBet.text = "0"
+            }
+            else if red.getMoney() < black.getMoney()
+            {
+                defaultCurrentRedBlackText.text = "Black          Bet: "
+                nextRedBlackBet.text = String(black.getMoney() - red.getMoney())
+            }
+            else
+            {
+                defaultCurrentRedBlackText.text = "Red            Bet: "
+                nextRedBlackBet.text = String(red.getMoney() - black.getMoney())
+            }
+            currentRedBlackWin.text = String(black.getWinningMoney()+red.getWinningMoney())
+            
+            if even.getMoney() == odd.getMoney()
+            {
+                defaultCurrentEvenOddText.text = "Draw           Bet: "
+                nextEvenOddBet.text = "0"
+            }
+            else if even.getMoney() < odd.getMoney()
+            {
+                defaultCurrentEvenOddText.text = "Odd            Bet: "
+                nextEvenOddBet.text = String(odd.getMoney() - even.getMoney())
+            }
+            else
+            {
+                defaultCurrentEvenOddText.text = "Even           Bet: "
+                nextEvenOddBet.text = String(even.getMoney() - odd.getMoney())
+            }
+            currentEvenOddWin.text = String(odd.getWinningMoney()+even.getWinningMoney())
         }
     }
     @IBOutlet weak var numberDisplay: UILabel!
