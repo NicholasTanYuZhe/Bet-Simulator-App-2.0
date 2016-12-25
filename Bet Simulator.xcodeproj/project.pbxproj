@@ -14,8 +14,6 @@
 		C68C95821E0F721800C09D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C68C95801E0F721800C09D98 /* LaunchScreen.storyboard */; };
 		C68C958D1E0F721800C09D98 /* Bet_SimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C958C1E0F721800C09D98 /* Bet_SimulatorTests.swift */; };
 		C68C95981E0F721800C09D98 /* Bet_SimulatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C95971E0F721800C09D98 /* Bet_SimulatorUITests.swift */; };
-		C68C95AA1E0F7D6300C09D98 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C95A91E0F7D6300C09D98 /* Controller.swift */; };
-		C68C95AC1E0F7D6B00C09D98 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C95AB1E0F7D6B00C09D98 /* Model.swift */; };
 		C6F31CB61E0FB9A5003E7373 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F31CB51E0FB9A5003E7373 /* Queue.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,8 +48,6 @@
 		C68C95931E0F721800C09D98 /* Bet SimulatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bet SimulatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68C95971E0F721800C09D98 /* Bet_SimulatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bet_SimulatorUITests.swift; sourceTree = "<group>"; };
 		C68C95991E0F721800C09D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C68C95A91E0F7D6300C09D98 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
-		C68C95AB1E0F7D6B00C09D98 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		C6F31CB51E0FB9A5003E7373 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,8 +105,6 @@
 				C68C957E1E0F721800C09D98 /* Assets.xcassets */,
 				C68C95801E0F721800C09D98 /* LaunchScreen.storyboard */,
 				C68C95831E0F721800C09D98 /* Info.plist */,
-				C68C95A91E0F7D6300C09D98 /* Controller.swift */,
-				C68C95AB1E0F7D6B00C09D98 /* Model.swift */,
 				C6F31CB51E0FB9A5003E7373 /* Queue.swift */,
 			);
 			path = "Bet Simulator";
@@ -272,10 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6F31CB61E0FB9A5003E7373 /* Queue.swift in Sources */,
-				C68C95AA1E0F7D6300C09D98 /* Controller.swift in Sources */,
 				C68C957A1E0F721800C09D98 /* ViewController.swift in Sources */,
 				C68C95781E0F721800C09D98 /* AppDelegate.swift in Sources */,
-				C68C95AC1E0F7D6B00C09D98 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
