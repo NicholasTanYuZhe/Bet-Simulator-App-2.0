@@ -15,6 +15,7 @@
 		C68C958D1E0F721800C09D98 /* Bet_SimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C958C1E0F721800C09D98 /* Bet_SimulatorTests.swift */; };
 		C68C95981E0F721800C09D98 /* Bet_SimulatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C95971E0F721800C09D98 /* Bet_SimulatorUITests.swift */; };
 		C6F31CB61E0FB9A5003E7373 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F31CB51E0FB9A5003E7373 /* Queue.swift */; };
+		C6FDEE651E0FD20C004AD7FE /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FDEE641E0FD20C004AD7FE /* Logic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C68C95971E0F721800C09D98 /* Bet_SimulatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bet_SimulatorUITests.swift; sourceTree = "<group>"; };
 		C68C95991E0F721800C09D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6F31CB51E0FB9A5003E7373 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		C6FDEE641E0FD20C004AD7FE /* Logic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				C68C95801E0F721800C09D98 /* LaunchScreen.storyboard */,
 				C68C95831E0F721800C09D98 /* Info.plist */,
 				C6F31CB51E0FB9A5003E7373 /* Queue.swift */,
+				C6FDEE641E0FD20C004AD7FE /* Logic.swift */,
 			);
 			path = "Bet Simulator";
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6FDEE651E0FD20C004AD7FE /* Logic.swift in Sources */,
 				C6F31CB61E0FB9A5003E7373 /* Queue.swift in Sources */,
 				C68C957A1E0F721800C09D98 /* ViewController.swift in Sources */,
 				C68C95781E0F721800C09D98 /* AppDelegate.swift in Sources */,

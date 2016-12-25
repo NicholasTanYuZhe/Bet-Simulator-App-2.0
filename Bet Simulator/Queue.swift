@@ -48,6 +48,12 @@ class Queue {
     func removeAllRandom() -> Void {
         random.removeAll()
     }
+    func setQueue(queue: [Int]) -> Void {
+        self.queue = queue
+    }
+    func setRandom(random: [Int]) -> Void {
+        self.random = random
+    }
     func setMoney(money: Int) -> Void {
         self.money = money
     }
@@ -67,6 +73,11 @@ class Queue {
         {
             queue.append(startValueNumber)
         }
+        money = startValueNumber + startValueNumber
+        winningMoney = 0
+        lowestMoney = 0
+    }
+    func resetWithoutAppend(startValueNumber: Int) -> Void {
         money = startValueNumber + startValueNumber
         winningMoney = 0
         lowestMoney = 0
