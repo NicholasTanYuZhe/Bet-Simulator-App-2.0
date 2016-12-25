@@ -11,6 +11,19 @@ import AudioToolbox
 
 class ViewController: UIViewController {
     var isTypingNumber = false
+    var start = Int()
+    var randomSmall = [Int] ()
+    var randomBig = [Int] ()
+    var randomRed = [Int] ()
+    var randomBlack = [Int] ()
+    var randomEven = [Int] ()
+    var randomOdd = [Int] ()
+    var queueSmall = [Int] ()
+    var queueBig = [Int] ()
+    var queueRed = [Int] ()
+    var queueBlack = [Int] ()
+    var queueEven = [Int] ()
+    var queueOdd = [Int] ()
     
     @IBAction func numberTapped(_ sender: AnyObject) {
         (numberDisplay.text!, isTypingNumber) = Controller().getNumber(number: (sender.currentTitle)!!, isTypingNumber: isTypingNumber, numberDisplay: numberDisplay.text!)
@@ -30,6 +43,110 @@ class ViewController: UIViewController {
     }
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBAction func indexChange(_ sender: UISegmentedControl) {
+        switch segmentedControl.selectedSegmentIndex
+        {
+            case 0:
+                defaultSmallWinText.text = "Small          Win: "
+                defaultBigWinText.text = "Big              Win: "
+                defaultSmallMinCapitalText.text = "MinCapital: "
+                defaultBigMinCapitalText.text = "MinCapital: "
+                smallWin.text = "0"
+                bigWin.text = "0"
+                smallMinCapital.text = "0"
+                bigMinCapital.text = "0"
+                defaultCurrentSmallBigText.text = ""
+                nextSmallBigBet.text = ""
+                currentSmallBigWinText.text = ""
+                currentSmallBigWin.text = ""
+                defaultRedWinText.text = "Red             Win: "
+                defaultBlackWinText.text = "Black          Win: "
+                defaultRedMinCapitalText.text = "MinCapital: "
+                defaultBlackMinCapitalText.text = "MinCapital: "
+                redWin.text = "0"
+                blackWin.text = "0"
+                redMinCapital.text = "0"
+                blackMinCapital.text = "0"
+                defaultCurrentRedBlackText.text = ""
+                nextRedBlackBet.text = ""
+                currentRedBlackWinText.text = ""
+                currentRedBlackWin.text = ""
+                defaultEvenWinText.text = "Even           Win: "
+                defaultOddWinText.text = "Odd            Win: "
+                defaultEvenMinCapitalText.text = "MinCapital: "
+                defaultOddMinCapitalText.text = "MinCapital: "
+                evenWin.text = "0"
+                oddWin.text = "0"
+                evenMinCapital.text = "0"
+                oddMinCapital.text = "0"
+                defaultCurrentEvenOddText.text = ""
+                nextEvenOddBet.text = ""
+                currentEvenOddWinText.text = ""
+                currentEvenOddWin.text = ""
+                start = 0
+                randomSmall.removeAll()
+                randomBig.removeAll()
+                randomRed.removeAll()
+                randomBlack.removeAll()
+                randomEven.removeAll()
+                randomOdd.removeAll()
+                queueSmall.removeAll()
+                queueBig.removeAll()
+                queueRed.removeAll()
+                queueBlack.removeAll()
+                queueEven.removeAll()
+                queueOdd.removeAll()
+            case 1:
+                defaultSmallWinText.text = ""
+                defaultBigWinText.text = ""
+                defaultSmallMinCapitalText.text = ""
+                defaultBigMinCapitalText.text = ""
+                smallWin.text = ""
+                bigWin.text = ""
+                smallMinCapital.text = ""
+                bigMinCapital.text = ""
+                defaultCurrentSmallBigText.text = "Draw           Bet: "
+                nextSmallBigBet.text = "0"
+                currentSmallBigWinText.text = "Win: "
+                currentSmallBigWin.text = "0"
+                defaultRedWinText.text = ""
+                defaultBlackWinText.text = ""
+                defaultRedMinCapitalText.text = ""
+                defaultBlackMinCapitalText.text = ""
+                redWin.text = ""
+                blackWin.text = ""
+                redMinCapital.text = ""
+                blackMinCapital.text = ""
+                defaultCurrentRedBlackText.text = "Draw           Bet: "
+                nextRedBlackBet.text = "0"
+                currentRedBlackWinText.text = "Win: "
+                currentRedBlackWin.text = "0"
+                defaultEvenWinText.text = ""
+                defaultOddWinText.text = ""
+                defaultEvenMinCapitalText.text = ""
+                defaultOddMinCapitalText.text = ""
+                evenWin.text = ""
+                oddWin.text = ""
+                evenMinCapital.text = ""
+                oddMinCapital.text = ""
+                defaultCurrentEvenOddText.text = "Draw           Bet: "
+                nextEvenOddBet.text = "0"
+                currentEvenOddWinText.text = "Win: "
+                currentEvenOddWin.text = "0"
+                start = 1
+                randomSmall.removeAll()
+                randomBig.removeAll()
+                randomRed.removeAll()
+                randomBlack.removeAll()
+                randomEven.removeAll()
+                randomOdd.removeAll()
+                queueSmall.removeAll()
+                queueBig.removeAll()
+                queueRed.removeAll()
+                queueBlack.removeAll()
+                queueEven.removeAll()
+                queueOdd.removeAll()
+        default: break
+        }
     }
     @IBOutlet weak var defaultSmallWinText: UILabel!
     @IBOutlet weak var defaultCurrentSmallBigText: UILabel!
