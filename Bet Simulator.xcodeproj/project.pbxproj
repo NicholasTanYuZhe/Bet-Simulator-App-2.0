@@ -14,6 +14,8 @@
 		C68C95821E0F721800C09D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C68C95801E0F721800C09D98 /* LaunchScreen.storyboard */; };
 		C68C958D1E0F721800C09D98 /* Bet_SimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C958C1E0F721800C09D98 /* Bet_SimulatorTests.swift */; };
 		C68C95981E0F721800C09D98 /* Bet_SimulatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C95971E0F721800C09D98 /* Bet_SimulatorUITests.swift */; };
+		C68C95AA1E0F7D6300C09D98 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C95A91E0F7D6300C09D98 /* Controller.swift */; };
+		C68C95AC1E0F7D6B00C09D98 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68C95AB1E0F7D6B00C09D98 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		C68C95931E0F721800C09D98 /* Bet SimulatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bet SimulatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68C95971E0F721800C09D98 /* Bet_SimulatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bet_SimulatorUITests.swift; sourceTree = "<group>"; };
 		C68C95991E0F721800C09D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C68C95A91E0F7D6300C09D98 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		C68C95AB1E0F7D6B00C09D98 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				C68C957E1E0F721800C09D98 /* Assets.xcassets */,
 				C68C95801E0F721800C09D98 /* LaunchScreen.storyboard */,
 				C68C95831E0F721800C09D98 /* Info.plist */,
+				C68C95A91E0F7D6300C09D98 /* Controller.swift */,
+				C68C95AB1E0F7D6B00C09D98 /* Model.swift */,
 			);
 			path = "Bet Simulator";
 			sourceTree = "<group>";
@@ -262,8 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C68C95AA1E0F7D6300C09D98 /* Controller.swift in Sources */,
 				C68C957A1E0F721800C09D98 /* ViewController.swift in Sources */,
 				C68C95781E0F721800C09D98 /* AppDelegate.swift in Sources */,
+				C68C95AC1E0F7D6B00C09D98 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +423,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3EQZS9T837;
 				INFOPLIST_FILE = "Bet Simulator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Nick.Bet-Simulator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -428,6 +437,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3EQZS9T837;
 				INFOPLIST_FILE = "Bet Simulator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Nick.Bet-Simulator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
