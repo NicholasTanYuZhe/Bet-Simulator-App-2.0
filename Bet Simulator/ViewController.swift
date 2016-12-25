@@ -24,6 +24,47 @@ class ViewController: UIViewController {
     var queueBlack = [Int] ()
     var queueEven = [Int] ()
     var queueOdd = [Int] ()
+    var number = 0
+    var indicator = 1;
+    var winningMoneySmall = 0
+    var winningMoneyBig = 0
+    var highestBettingSmall = 0
+    var highestBettingBig = 0
+    var lowestMoneySmall = 0
+    var lowestMoneyBig = 0
+    var moneySmall = 0
+    var moneyBig = 0
+    var winningMoneyRed = 0
+    var winningMoneyBlack = 0
+    var highestBettingRed = 0
+    var highestBettingBlack = 0
+    var lowestMoneyRed = 0
+    var lowestMoneyBlack = 0
+    var moneyRed = 0
+    var moneyBlack = 0
+    var winningMoneyOdd = 0
+    var winningMoneyEven = 0
+    var highestBettingOdd = 0
+    var highestBettingEven = 0
+    var lowestMoneyOdd = 0
+    var lowestMoneyEven = 0
+    var moneyEven = 0
+    var moneyOdd = 0
+    var startValueNumber = 5
+    var totalSmall = 0
+    var totalBig = 0
+    var totalRed = 0
+    var totalBlack = 0
+    var totalEven = 0
+    var totalOdd = 0
+    var totalZero = 0
+    var counter = 0
+    var money = 0
+    var highestNum = 0
+    var winningMoney = 0
+    var lowestMoney = 0
+    var totalGame = 0
+    var numberEntered = 0
     
     @IBAction func numberTapped(_ sender: AnyObject) {
         (numberDisplay.text!, isTypingNumber) = Controller().getNumber(number: (sender.currentTitle)!!, isTypingNumber: isTypingNumber, numberDisplay: numberDisplay.text!)
@@ -96,55 +137,10 @@ class ViewController: UIViewController {
                 queueEven.removeAll()
                 queueOdd.removeAll()
             case 1:
-                defaultSmallWinText.text = ""
-                defaultBigWinText.text = ""
-                defaultSmallMinCapitalText.text = ""
-                defaultBigMinCapitalText.text = ""
-                smallWin.text = ""
-                bigWin.text = ""
-                smallMinCapital.text = ""
-                bigMinCapital.text = ""
-                defaultCurrentSmallBigText.text = "Draw           Bet: "
-                nextSmallBigBet.text = "0"
-                currentSmallBigWinText.text = "Win: "
-                currentSmallBigWin.text = "0"
-                defaultRedWinText.text = ""
-                defaultBlackWinText.text = ""
-                defaultRedMinCapitalText.text = ""
-                defaultBlackMinCapitalText.text = ""
-                redWin.text = ""
-                blackWin.text = ""
-                redMinCapital.text = ""
-                blackMinCapital.text = ""
-                defaultCurrentRedBlackText.text = "Draw           Bet: "
-                nextRedBlackBet.text = "0"
-                currentRedBlackWinText.text = "Win: "
-                currentRedBlackWin.text = "0"
-                defaultEvenWinText.text = ""
-                defaultOddWinText.text = ""
-                defaultEvenMinCapitalText.text = ""
-                defaultOddMinCapitalText.text = ""
-                evenWin.text = ""
-                oddWin.text = ""
-                evenMinCapital.text = ""
-                oddMinCapital.text = ""
-                defaultCurrentEvenOddText.text = "Draw           Bet: "
-                nextEvenOddBet.text = "0"
-                currentEvenOddWinText.text = "Win: "
-                currentEvenOddWin.text = "0"
                 start = 1
-                randomSmall.removeAll()
-                randomBig.removeAll()
-                randomRed.removeAll()
-                randomBlack.removeAll()
-                randomEven.removeAll()
-                randomOdd.removeAll()
-                queueSmall.removeAll()
-                queueBig.removeAll()
-                queueRed.removeAll()
-                queueBlack.removeAll()
-                queueEven.removeAll()
-                queueOdd.removeAll()
+                Controller().initializeCurrent(aText: defaultSmallWinText.text!, bText: defaultBigWinText.text!, aMinCapitalText: defaultSmallMinCapitalText.text!, bMinCapitalText: defaultBigMinCapitalText.text!, aWin: smallWin.text!, bWin: bigWin.text!, aMinCapital: smallMinCapital.text!, bMinCapital: bigMinCapital.text!, currentText: defaultCurrentSmallBigText.text!, nextBet: nextSmallBigBet.text!, currentWinText: currentSmallBigWinText.text!, currentWin: currentSmallBigWin.text!, queueA: queueSmall, queueB: queueBig, startValueNumber: startValueNumber, moneyA: moneySmall, moneyB: moneyBig, winningMoneyA: winningMoneySmall, winningMoneyB: winningMoneyBig, lowestMoneyA: lowestMoneySmall, lowestMoneyB: lowestMoneyBig, randomA: randomSmall, randomB: randomBig)
+                Controller().initializeCurrent(aText: defaultRedWinText.text!, bText: defaultBlackWinText.text!, aMinCapitalText: defaultRedMinCapitalText.text!, bMinCapitalText: defaultBlackMinCapitalText.text!, aWin: redWin.text!, bWin: blackWin.text!, aMinCapital: redMinCapital.text!, bMinCapital: blackMinCapital.text!, currentText: defaultCurrentRedBlackText.text!, nextBet: nextRedBlackBet.text!, currentWinText: currentRedBlackWinText.text!, currentWin: currentRedBlackWin.text!, queueA: queueRed, queueB: queueBlack, startValueNumber: startValueNumber, moneyA: moneyRed, moneyB: moneyBlack, winningMoneyA: winningMoneyRed, winningMoneyB: winningMoneyBlack, lowestMoneyA: lowestMoneyRed, lowestMoneyB: lowestMoneyBlack, randomA: randomRed, randomB: randomBlack)
+                Controller().initializeCurrent(aText: defaultEvenWinText.text!, bText: defaultOddWinText.text!, aMinCapitalText: defaultEvenMinCapitalText.text!, bMinCapitalText: defaultOddMinCapitalText.text!, aWin: evenWin.text!, bWin: oddWin.text!, aMinCapital: evenMinCapital.text!, bMinCapital: oddMinCapital.text!, currentText: defaultCurrentEvenOddText.text!, nextBet: nextEvenOddBet.text!, currentWinText: currentEvenOddWinText.text!, currentWin: currentEvenOddWin.text!, queueA: queueEven, queueB: queueOdd, startValueNumber: startValueNumber, moneyA: moneyEven, moneyB: moneyOdd, winningMoneyA: winningMoneyEven, winningMoneyB: winningMoneyOdd, lowestMoneyA: lowestMoneyEven, lowestMoneyB: lowestMoneyOdd, randomA: randomEven, randomB: randomOdd)
         default: break
         }
     }
